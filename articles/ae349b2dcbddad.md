@@ -6,7 +6,7 @@ topics: ["Laravel", "PHP"]
 published: false
 ---
 # はじめに
-先日，PHPerKaigi 2022 に登壇させていただきました．ご清聴いただいた皆さま，ありがとございました！
+先日，PHPerKaigi 2022 に登壇させていただきました．ご清聴いただいた皆さま，ありがとうございました！
 https://fortee.jp/phperkaigi-2022/proposal/7d7503c6-b152-40c5-8d51-e24145c522ef
 
 また，登壇に使用したスライドも公開してありますのでぜひご覧ください．
