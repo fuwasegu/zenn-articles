@@ -1,5 +1,5 @@
 ---
-title: "Eloquent に寄せたなんちゃって Entity でレイヤードアーキテクチャを楽する"
+title: "【PHPerKaigi2022 後日談】なんちゃって Entity を導入しよう"
 emoji: "🥱"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Laravel", "PHP"]
