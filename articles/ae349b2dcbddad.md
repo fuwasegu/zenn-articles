@@ -3,17 +3,17 @@ title: "Eloquent に寄せたなんちゃって Entity でレイヤードアー�
 emoji: "🥱"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Laravel", "PHP"]
-published: false
+published: true
 ---
 # はじめに
-先日，PHPerKaigi 2022 に登壇させていただきました．ご清聴いただいた皆さま，ありがとうございました！
+先日，**PHPerKaigi 2022** に登壇させていただきました．ご清聴いただいた皆さま，ありがとうございました！
 https://fortee.jp/phperkaigi-2022/proposal/7d7503c6-b152-40c5-8d51-e24145c522ef
 
 また，登壇に使用したスライドも公開してありますのでぜひご覧ください．
 @[speakerdeck](fee8e92dafea4b5d80bcfc12a352781f)
 
 # 登壇内容をふりかえる
-さて，今回の発表では主に以下のことについてお話しました
+さて，今回の発表では主に以下のことについてお話しました．
 * Laravel Facade を使いすぎると破綻するのでできるだけ使用を控えよう
 * プロダクトの規模が大きくなるにつれて MVC アーキテクチャではつらみが出てくるので「なんちゃってクリーンアーキテクチャ」を導入しよう
 * Unit テストを書こう．そのためにアプリケーションのロジックからフレームワーク依存を剥がそう
@@ -26,7 +26,6 @@ https://fortee.jp/phperkaigi-2022/proposal/7d7503c6-b152-40c5-8d51-e24145c522ef
 :::
 
 スライド中に示した Entity のコード例は以下の通りです．
-
 
 ```php
 class User
@@ -158,7 +157,12 @@ $user = $this->userRepository
     );
 ```
 
-PHP8.0 から導入された名前付き引数のおかげで値の渡しミスはかなり防げますが，それでも列挙するのがとても大変です．
+PHP8.0 から導入された**名前付き引数**のおかげで値の渡しミスはかなり防げますが，それでも列挙するのがとても大変です．
+
+:::message
+オプション引数を使って `?string $name = null,` にすればいいのでは？と思われる方もいらっしゃるかもしれません．
+もちろんこれも一つの解決策ではありますが，Entity は普通の VO などとは違い DB のテーブルと対応することが多いため，値としての NULL を設定したい場合と区別が付きづらくなるという欠点がありますので，あまりおすすめできません．
+:::
 
 あぁ，Eloquent と仲良くしていた頃が懐かしいなぁ．ActiveRecord だったら
 
@@ -504,7 +508,7 @@ class UpdateEmergencyContactNumberActionTest
 }
 ```
 
-このように，Entity 自身は Eloquent Model に依存していますが，UseCase 自身は引き続き Eloquent Model に依存しないため，モックを使って Unit テストを書くことができます．
+このように，Entity 自身は Eloquent Model に依存していますが，UseCase 自身は引き続き Eloquent Model に依存しないため，モックを使って UseCase の Unit テストを書くことができました！
 
 # まとめ
 * Entity ＋ Repository を導入することで UseCase から Eloquent を剥がし Unit テストが書けるようになる（PHPerKaigi の登壇内容）
