@@ -382,7 +382,7 @@ namespace App\UseCases\Employee;
 
 use App\Exceptions\Employee\EmployeeNotFoundException;
 use App\Exceptions\Employee\OverwiteSameValueException;
-use App\Models\Employee;
+use App\Entities\Employee;
 use App\Repositories\EmployeeRepository;
 
 class UpdateEmergencyContactNumberAction
