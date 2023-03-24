@@ -4,6 +4,7 @@ emoji: "🥱"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Laravel", "PHP"]
 published: true
+publication_name: "yumemi_inc"
 ---
 # はじめに
 先日，**PHPerKaigi 2022** に登壇させていただきました．ご清聴いただいた皆さま，ありがとうございました！
