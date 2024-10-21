@@ -1,7 +1,9 @@
 {
     "cSpell.words": [
-        "hoge",
         "fuga",
-        "piyo"
-    ]
+        "hoge",
+        "piyo",
+        "supabase"
+    ],
+    "files.autoSave": "onFocusChange"
 }
